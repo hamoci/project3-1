@@ -246,7 +246,6 @@ List::~List()	//소멸자를 통해 연결리스트 전체 할당 해제
 	while(temp != NULL)	//연결리스트의 끝까지 반복
 	{
 		head = temp->GetNext();	//다음 Node를 머리로 만듬
-		std::cout << " Free[" << temp->GetID() << "]\n";
 		delete temp;	//그 이후 그 전 Node 동적할당 해제
 		temp = head;	//다음 Node를 head로 만듬
 	}
